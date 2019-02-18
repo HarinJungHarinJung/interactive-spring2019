@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>CSS Still Life 1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="canvas.css">
+
+	<style>
+
+	.canvas {
+		/* if you want to change the background of your canvas, do it here */
+		background: #FFEBCD;
+		align-content: center;
+	}
+
+	/* this is where you can style the objects in your still life */
+	.box {
+		width: 250px;
+	  height: 300px;
+	  overflow: hidden;
+	  background: #C0C0C0;
+
+	}
+	.hid-box {
+		width: 250px;
+		height: 300px;
+	  position: relative;
+	  transition: all .3s ease-out;
+	  background-image: linear-gradient(blue, skyblue);
+	  height: 100%;
+	}
+	.box:hover > .hid-box{
+	  top: -15px;
+	}
+
+	#rectangle {
+      width: 400px;
+      height: 100px;
+      background: #8A2BE2;
+			position: absolute;
+			top: 400px;
+			left: 400px;
+			z-index: 4;
+    }
+
+	#lamp {
+	      transition: .3s box-shadow ease-out;
+	      -webkit-transition: .3s box-shadow ease-out;
+	      -moz-transition: .3s box-shadow ease-out;
+	      -o-transition: .3s box-shadow ease-out;
+	    }
+	 #lamp:hover {
+	      box-shadow: 0 0 50px 25px rgba(255, 255, 255, 0.5);
+	    }
+
+	</style>
+
+</head>
+
+<body>
+
+		<!-- this starts the canvas div. do not delete this! -->
+    <div class="canvas">
+
+			<!-- below is where you put your objects in your still life -->
+			<div class="box">
+			<div class="hid-box">
+			    <h1></h1>
+			    <p></p>
+			  </div>
+			</div>
+			<div id="rectangle"></div>
+			<div id="lamp"></div>
+			<div id="lamp:hover"></div>
+		<!-- this ends the canvas div. do not delete this! -->
+    </div>
+
+</body>
+
+</html>
