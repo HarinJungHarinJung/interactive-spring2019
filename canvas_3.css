@@ -1,0 +1,81 @@
+.wrap {
+  overflow: hidden;
+  margin: 0px;
+}
+.box {
+  float: left;
+  position: relative;
+  width: 40%;
+  padding-bottom: 20%;
+}
+.boxInner {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+.boxInner img {
+  width: 100%;
+}
+.boxInner .titleBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: -50px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+	font-family: "lucida console", monospace;
+  font-weight: regular;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+section.no-touch .boxInner:hover .titleBox,
+section.touch .boxInner.touchFocus .titleBox {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 480px) {
+  /* Smartphone view: 1 tile */
+  .box {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) and (min-width: 481px) {
+  /* Tablet view: 2 tiles */
+  .box {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1050px) and (min-width: 651px) {
+  /* Small desktop / ipad view: 3 tiles */
+  .box {
+    width: 33.3%;
+  }
+}
+@media only screen and (max-width: 1290px) and (min-width: 1051px) {
+  /* Medium desktop: 4 tiles */
+  .box {
+    width: 25%;
+  }
+}
+
+h {
+  position: fixed;
+  left: 100px;
+  top: 100px;
+	text-align: left;
+  font-family: "lucida console", monospace;
+  font-weight: regular;
+  font-size: 14px;
+	line-height: 19px;
+  color: yellow;
+  top: 20px;
+  right: 0;
+  z-index: 10;
+}
